@@ -1,4 +1,8 @@
 ## Git原理（GitPython/PyGithub）
+
+![](./pic/p1.jpg)
+
+
 在 Git 版本控制系统中， 使用的是一种称为“提交对象”的数据结构来存储代码历史记录。
 名词
 6.1 提交（状态变更）（commit_id）
