@@ -75,6 +75,9 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- 将~/.ssh/id_rsa.pub或C:\Users\Administrator\.ssh\id_rsa.pub复制到gitlab
 - 远程仓库克隆到本地，当仓库地址支持 SSH 方式时
 	- git clone git@gitee.com:xxx/python_study.git
+- 要克隆远程仓库的某个分支到本地，可以使用以下命令：
+	- git clone -b 分支名 仓库地址
+	- 其中，分支名 是要克隆的分支的名称，仓库地址 是远程仓库的 URL。
 - 远程仓库克隆到本地，当仓库地址支持 HTTPS 方式时
 	- git clone https://gitee.com/xxx/python_study.git
 - 在本地目录下关联远程repository ：
