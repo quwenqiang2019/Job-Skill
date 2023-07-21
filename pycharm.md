@@ -7,5 +7,5 @@
 ## PyCharm支持的4种Python Interpreter和配置方法
 - System Interpreter（python的基础本地环境）
 - Virtualenv Environment（基于python构建的虚拟环境）
-- Conda Environment（需要安装anaconda）
+- Conda Environment（需要安装anaconda，基于conda构建的虚拟环境）
 - Pipenv Environment
