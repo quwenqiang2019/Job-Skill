@@ -60,6 +60,12 @@ Python常用的基本数据类型有7种：数字(Number)、布尔(Booleans)、�
 - 数据框(Dataframe)
 - 数组(np.array)
 
+python的字典和json字符串的区别
+
+- python中，json和dict非常类似，都是key-value的形式，而且json和dict也可以非常方便的通过dumps和loads互转，但是它们之间还是有区别的：
+- json：是一种数据格式，是纯字符串。可以被解析成python的dict或其他形式。
+- dict：是一个完整的数据结构，是对hash table这一数据结构的实现，是一套从存储到提取都封装好的方案。它使用内置的hash函数来规划key对应的value的存储位置，从而获得O(1)的数据读取速度。
+
 
 ## Python 编码规范
 - 每行代码不要超过79个字符，可以使用括号或反斜杠来换行。
