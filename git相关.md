@@ -27,6 +27,8 @@ commit_id 是一个 Git 版本控制系统中的概念，它是一个由 40 个�
 - Description:
 	- 为用户添加了登录功能，使用了 OAuth 2.0 协议进行验证。
 	- Closes #123
+	- Closes #问题编号：使用这个格式可以在合并 MR 时关闭单个问题。
+	- Closes #问题编号, Closes #另一个问题编号：使用逗号分隔多个问题编号，可以在合并 MR 时关闭多个问题。
 	- Reslove #123
 
 ## 分支（branch）
