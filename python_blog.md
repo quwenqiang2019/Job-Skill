@@ -1,0 +1,23 @@
+# blog项目
+
+- 进入项目所在根文件夹
+	- E:\python_blog\blog_project
+- 配置虚拟环境环境，安装依赖库
+	- 进入E:\python_blog\blog_project目录，直接执行pip3 install -r requirements.txt
+		- win10+python2.7+django1.8+mysql+mysql-python+pillow
+- 安装mysql
+	- 安装mysql并设置用户名密码，创建数据库blogtest
+		- user:wenqiang; pwd:Qu666666@
+	- 修改blog_project/setting.py 修改数据库配置
+- 初始化数据库
+	- python manage.py makemigrations
+	- python manage.py migrate
+- 创建超级用户
+	- python manage.py createsuperuser
+- 启动程序
+	- python manage.py runserver
+- 查看项目结果
+	- 浏览器输入 http://127.0.0.1:8080 即可访问
+- 后台管理
+	- http://127.0.0.1:8080/admin进入admin页面，添加文章
+- 项目部署，上线
