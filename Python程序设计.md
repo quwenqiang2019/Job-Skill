@@ -165,8 +165,6 @@ Print(‘C’)
 	- 日志记录
 
 
-
-
 ## Python 内置模块、第三方模块、自建模块
 
 - 内置模块（built-in modules）：这些是**Python语言本身提供的模块，它们包含在Python的标准库中。内置模块是在Python安装时就已经包含在解释器中的模块，可以直接在代码中使用，无需额外安装**。例如，math、random和datetime等模块都是内置模块。
