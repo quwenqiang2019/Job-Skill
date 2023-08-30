@@ -56,8 +56,13 @@ Python常用的基本数据类型有7种：数字(Number)、布尔(Booleans)、�
 
 引申数据类型
 
-- 索引序列(Series)
+- 索引序列(Series):
+	- 由index和value组成
+	- index是索引，是一个一维列表
+	- value是值，是一个一维列表
 - 数据框(Dataframe)
+	- 由index（索引）、colums（字段）、values（值）三部分组成
+	- index和colums是一个一维列表，values是一个二维列表
 - 数组(np.array)
 
 python的字典和json字符串的区别
