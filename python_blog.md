@@ -28,13 +28,13 @@
 
 
 ## 项目结构
-- blog_project
+- blog_project(项目的根目录)
 	- blog(Django 应用程序)
 		- admin.py(用于定义 Django 管理后台的配置)
-		- forms.py()
+		- forms.py(表单的提交与处理)
 		- models.py(用于定义应用程序的数据模型)
 		- test.py(用于编写应用程序的单元测试)
-		- upload.py()
+		- upload.py(文件上传)
 		- urls.py(URL 映射到视图，用于指定哪个 URL 请求将调用哪个视图)
 		- views.py(文件用于定义应用程序的视图函数，用于处理 Web 请求并返回响应)
 	- blog_project(Django 项目)
@@ -42,7 +42,11 @@
 		- urls.py(文件包含了 Django 项目的 URL 映射关系)
 		- wsgi.py(文件是使用 WSGI（Web 服务器网关接口）的入口文件)
 	- log（日志文件）
-	- static（静态文件）
-	- templates（模板文件）
+	- static（静态文件，css、images、js）
+	- templates（模板文件，html文件）
 	- uploads（上传文件）
 	- manage.py(是一个命令行工具，可以用来执行各种 Django 命令，例如启动开发服务器、执行数据库迁移等等)
+
+
+## 几个术语
+ORM：对象关系映射，将数据库和python的对象进行映射关联，通过这种映射关联的关系，可以通过操作python的对象直接操作数据库，减少SQL操作的一些细节
