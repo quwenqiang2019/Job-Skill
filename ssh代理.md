@@ -13,7 +13,7 @@
 	    Port 5022
 	    User wenqiang
 	```
-	- 在cmd输入ssh -fCND 127.0.0.1:1081 -p 5022 tiaoban
+	- 在cmd输入：ssh -fCND 127.0.0.1:1081 -p 5022 tiaoban
 
 - 访问内网中的服务器
 	- 在C:\Users\Administrator\.ssh\config文件设置跳板
