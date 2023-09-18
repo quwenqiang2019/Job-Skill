@@ -203,7 +203,7 @@ Print(‘C’)
 	- 实现协程：生成器可以用作协程，即可暂停和恢复执行的函数。这对于处理异步编程和事件驱动编程非常有用。
 
 
-```
+```python
 def my_generator():
     for i in range(10):
         yield i
@@ -211,3 +211,8 @@ def my_generator():
 for num in my_generator():
     print(num)
 ```
+
+
+## Python 中方法（m）和函数（f）之间的区别
+- Python 函数是一系列以特定顺序执行的语句，让我们实现代码可重用性。Python 函数包括内置函数和用户定义的函数。
+- Python 方法就像一个函数，只不过它需要附加到一个对象上。我们通过对象调用一个方法，它可能会对该对象进行更改。因此，方法属于一个类。
