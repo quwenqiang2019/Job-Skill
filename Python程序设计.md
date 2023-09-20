@@ -41,7 +41,8 @@ D:\工作\gitlab项目\ospp-report\data_mgmt_ospp_report\data_analysis\__init__.
 - 5、获取上上上级目录
 	- print(os.path.join(os.getcwd(), "../.."))
 	- print(os.path.dirname(os.path.dirname(os.getcwd())))
-
+- 6、 遍历目录下的文件
+	- for filename in os.listdir(filepath)
 
 ## python常见的数据类型
 #### Python常用的基本数据类型有7种：数字(Number)、布尔(Booleans)、字符串(String)、列表(List)、元组(Tuple)、字典(Dictionary)、集合(Set)。
