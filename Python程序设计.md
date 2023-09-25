@@ -46,8 +46,7 @@ D:\工作\gitlab项目\ospp-report\data_mgmt_ospp_report\data_analysis\__init__.
 
 ## python常见的数据类型
 #### Python常用的基本数据类型有7种：数字(Number)、布尔(Booleans)、字符串(String)、列表(List)、元组(Tuple)、字典(Dictionary)、集合(Set)。
-
-- 数字(Numbers)： 整数, 浮点数, 复数
+- 数字(Numbers)： 整数（int）, 浮点数（float）, 复数
 - 布尔(Booleans)： True和False
 - 字符串(Strings)：Uniconde字符序列, 在引号内包含
 - 列表(list)： 有序的值的序列[]，有序性、可变性、可重复性
@@ -56,7 +55,6 @@ D:\工作\gitlab项目\ospp-report\data_mgmt_ospp_report\data_analysis\__init__.
 - 字典(Dictionaries)： 无序的键值对的组合{k:v}
 
 #### 引申数据类型
-
 - 索引序列(Series):
 	- 由index和value组成
 	- index是索引，是一个一维列表
@@ -67,7 +65,6 @@ D:\工作\gitlab项目\ospp-report\data_mgmt_ospp_report\data_analysis\__init__.
 - 数组(np.array)
 
 #### python的字典和json字符串的区别
-
 - python中，json和dict非常类似，都是key-value的形式，而且json和dict也可以非常方便的通过dumps和loads互转，但是它们之间还是有区别的：
 - json：是一种数据格式，是纯字符串。可以被解析成python的dict或其他形式。
 - dict：是一个完整的数据结构，是对hash table这一数据结构的实现，是一套从存储到提取都封装好的方案。它使用内置的hash函数来规划key对应的value的存储位置，从而获得O(1)的数据读取速度。
@@ -217,3 +214,13 @@ for num in my_generator():
 ## Python 中方法（m）和函数（f）之间的区别
 - Python 函数是一系列以特定顺序执行的语句，让我们实现代码可重用性。Python 函数包括内置函数和用户定义的函数。
 - Python 方法就像一个函数，只不过它需要附加到一个对象上。我们通过对象调用一个方法，它可能会对该对象进行更改。因此，方法属于一个类。
+
+
+
+## Python类型注释
+- 类型注释就像变量的名称标签，使它们能够清楚地了解它们要保存的数据类型。
+- 另外，他们还与IDE 等工具配合使用，在错误发生之前捕获它们。
+```Python
+def add(a: int, b: int) -> int:
+    return a + b
+```
