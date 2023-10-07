@@ -41,12 +41,12 @@ D:\工作\gitlab项目\ospp-report\data_mgmt_ospp_report\data_analysis\__init__.
 - 5、获取上上上级目录
 	- print(os.path.join(os.getcwd(), "../.."))
 	- print(os.path.dirname(os.path.dirname(os.getcwd())))
-
+- 6、 遍历目录下的文件
+	- for filename in os.listdir(filepath)
 
 ## python常见的数据类型
 #### Python常用的基本数据类型有7种：数字(Number)、布尔(Booleans)、字符串(String)、列表(List)、元组(Tuple)、字典(Dictionary)、集合(Set)。
-
-- 数字(Numbers)： 整数, 浮点数, 复数
+- 数字(Numbers)： 整数（int）, 浮点数（float）, 复数
 - 布尔(Booleans)： True和False
 - 字符串(Strings)：Uniconde字符序列, 在引号内包含
 - 列表(list)： 有序的值的序列[]，有序性、可变性、可重复性
@@ -55,7 +55,6 @@ D:\工作\gitlab项目\ospp-report\data_mgmt_ospp_report\data_analysis\__init__.
 - 字典(Dictionaries)： 无序的键值对的组合{k:v}
 
 #### 引申数据类型
-
 - 索引序列(Series):
 	- 由index和value组成
 	- index是索引，是一个一维列表
@@ -66,7 +65,6 @@ D:\工作\gitlab项目\ospp-report\data_mgmt_ospp_report\data_analysis\__init__.
 - 数组(np.array)
 
 #### python的字典和json字符串的区别
-
 - python中，json和dict非常类似，都是key-value的形式，而且json和dict也可以非常方便的通过dumps和loads互转，但是它们之间还是有区别的：
 - json：是一种数据格式，是纯字符串。可以被解析成python的dict或其他形式。
 - dict：是一个完整的数据结构，是对hash table这一数据结构的实现，是一套从存储到提取都封装好的方案。它使用内置的hash函数来规划key对应的value的存储位置，从而获得O(1)的数据读取速度。
@@ -216,3 +214,29 @@ for num in my_generator():
 ## Python 中方法（m）和函数（f）之间的区别
 - Python 函数是一系列以特定顺序执行的语句，让我们实现代码可重用性。Python 函数包括内置函数和用户定义的函数。
 - Python 方法就像一个函数，只不过它需要附加到一个对象上。我们通过对象调用一个方法，它可能会对该对象进行更改。因此，方法属于一个类。
+
+
+
+## Python数据类型注释
+- 类型注释就像变量的名称标签，使它们能够清楚地了解它们要保存的数据类型。
+- 另外，他们还与IDE 等工具配合使用，在错误发生之前捕获它们。
+```Python
+def add(a: int, b: int) -> int:
+    return a + b
+```
+
+## 解释器（Interpreter）和编译器（Compiler）
+- 解释器（Interpreter）和编译器（Compiler）是两种常见的将高级程序代码转换为可执行代码的工具。
+- 解释器逐行解释源代码，并将其转换为机器代码或字节码，然后立即执行。解释器逐行读取源代码，并即时执行每一行，无需事先将整个代码转换为可执行形式。这意味着解释器在运行代码之前不会生成完整的可执行文件。
+- 编译器在运行之前将整个源代码转换为机器代码或字节码，生成一个可执行文件。编译器将源代码作为输入，经过词法分析、语法分析、语义分析和优化等步骤，生成与目标平台相关的二进制代码，然后再执行可执行文件。
+- 解释器语言：
+	- Python：Python是一种解释型语言，通常使用Python解释器来逐行解释和执行Python代码。
+	- JavaScript：JavaScript通常在Web浏览器中使用解释器来解释和执行代码。常见的JavaScript解释器包括V8（用于Chrome浏览器）和SpiderMonkey（用于Firefox浏览器）。
+	- Ruby：Ruby语言也使用解释器来逐行解释和执行代码。常见的Ruby解释器包括MRI（Matz's Ruby Interpreter）和JRuby。
+	- Perl：Perl是一种解释型语言，常用的解释器是Perl解释器（perl）。
+- 编译器语言：
+	- C：C语言通常使用编译器将源代码编译为机器码，生成可执行文件。常见的C编译器包括GCC（GNU Compiler Collection）和Clang。
+	- C++：C++语言也使用编译器将源代码编译为机器码，生成可执行文件。常见的C++编译器包括GCC和Clang。
+	- Java：Java语言使用Java编译器（javac）将源代码编译为字节码，然后在Java虚拟机（JVM）上执行。字节码是一种中间表示形式，可以由JVM解释执行或进行即时编译。
+	- Go：Go语言使用Go编译器（go）将源代码编译为机器码，生成可执行文件。
+- 同一种编程语言可以有解释器和编译器两种实现方式。例如，Python语言可以使用解释器（如CPython）来逐行解释执行代码，也可以使用编译器（如Numba、PyPy）将代码编译为机器码以提高执行速度。同样，Java语言在编译阶段将源代码编译为字节码，然后在运行时使用JVM解释执行字节码，也可以使用即时编译器（如HotSpot）将字节码编译为机器码以提高执行效率。
