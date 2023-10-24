@@ -36,6 +36,28 @@
 - 功能测试与集成测试
 - 发布
 
+# 开发环境
+- win10
+- python2.7.10
+- django1.8.2
+- mysql5.6.24
+- mysql-python1.2.3
+- pillow2.8.1
+
+# 技术重难点
+- 表单的提交与处理
+- 文件的上传
+- session和cookie
+- ORM：对象关系映射，将数据库和python的对象进行映射关联，通过这种映射关联的关系，可以通过操作python的对象直接操作数据库，减少SQL操作的一些细节
+- 模板
+- JQuery
+- Ajax
+- json
+- xml
+- 后台管理
+- 日志调式
+- 缓存
+- 安全
 
 
 
@@ -43,7 +65,8 @@
 
 - 进入项目所在根文件夹
 	- E:\python_blog\blog_project
-- 配置虚拟环境环境，安装依赖库
+- 配置虚拟环境环境
+- 安装依赖库
 	- 进入E:\python_blog\blog_project目录，直接执行pip3 install -r requirements.txt
 		- win10+python2.7+django1.8+mysql+mysql-python+pillow
 - 安装mysql
@@ -89,5 +112,3 @@
 	- manage.py(是一个命令行工具，可以用来执行各种 Django 命令，例如启动开发服务器、执行数据库迁移等等)
 
 
-## 几个术语
-ORM：对象关系映射，将数据库和python的对象进行映射关联，通过这种映射关联的关系，可以通过操作python的对象直接操作数据库，减少SQL操作的一些细节
