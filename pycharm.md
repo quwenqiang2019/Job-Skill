@@ -55,13 +55,7 @@
 
 
 
-您的免费API Key为: sk-QnX8nky4zXmRxfUgAZ5bmKInUseicFcnim4n32u7aHMf73QR
 
-
-账号：5b0nk3bz@deepyinc.com
-密码：5b0nk3bz@deepyinc.com
-key：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
-登录网址：https://chat.openai.com/
 
 
 
