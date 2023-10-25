@@ -5,18 +5,19 @@
 
 
 ## PyCharm支持的4种Python Interpreter和配置方法
-- System Interpreter（python本地解释器）
+- System Interpreter（python本地解释器或者基于anaconda的本地python解释器）
 - Virtualenv Environment（项目虚拟环境）
 	- 进入到项目目录下D:\myProject
 		- Python自3.3版本之后，官方自带了用于创建虚拟环境的venv模块
 			- python -m venv [虚拟环境名称]
 		- Python自3.3版本之前，
 			- virtualenv [虚拟环境名称]
-		- 创建完虚拟环境后，会在项目文件夹下生成一个虚拟环境文件夹
+		- 创建完虚拟环境后，会在项目文件夹下生成一个虚拟环境文件夹D:\myProject\venv，解释器的位置D:\myProject\venv\Scripts\python.exe
 - Conda Environment（conda环境）
-	- D:\software\Anaconda3\python.exe(anaconda的基础python解释器)
-	- D:\software\Anaconda3\envs\env_name\python.exe(基于conda构建的python解释器)
-		- 在这个python解释器下，也可以基于这个python解释器进一步为项目创建虚拟环境，在项目文件夹下生成一个虚拟环境文件夹。
+	- conda executable：D:\software\Anaconda3\Scripts\conda.exe
+		- D:\software\Anaconda3\python.exe(anaconda的基础python解释器)
+		- D:\software\Anaconda3\envs\env_name\python.exe(基于conda构建的python解释器)
+			- 在这个python版本解释器下，也可以基于这个python版本的解释器进一步为项目创建虚拟环境，在项目文件夹下生成一个虚拟环境文件夹D:\myProject\venv，这个虚拟环境不继承conda，只继承了python解释器的版本
 - Pipenv Environment
 
 
@@ -51,3 +52,16 @@
 	- 豆瓣(douban) http://pypi.douban.com/simple/
 	- 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
 	- 中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
+
+
+
+您的免费API Key为: sk-QnX8nky4zXmRxfUgAZ5bmKInUseicFcnim4n32u7aHMf73QR
+
+
+账号：5b0nk3bz@deepyinc.com
+密码：5b0nk3bz@deepyinc.com
+key：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
+登录网址：https://chat.openai.com/
+
+
+
