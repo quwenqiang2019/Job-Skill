@@ -54,6 +54,8 @@
 	- 中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
 
 
+# 通过配置的代理服务器在具有外网连接的环境中在Pycharm中运行python代码
+
 
 
 
