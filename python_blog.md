@@ -40,7 +40,7 @@
 - win10
 - python2.7.10
 - django1.8.2
-- mysql5.6.24
+- mysql5.6.24/8.0
 - mysql-python1.2.3
 - pillow2.8.1
 
@@ -68,16 +68,18 @@
 - 配置虚拟环境环境
 - 安装依赖库
 	- 进入E:\python_blog\blog_project目录，直接执行pip3 install -r requirements.txt
-		- win10+python2.7+django1.8+mysql+mysql-python+pillow
 - 安装mysql
-	- 安装mysql并设置用户名密码，创建数据库blogtest
+	- 安装mysql并设置用户名密码
+		- root；Qu666666@
 		- user:wenqiang; pwd:Qu666666@
+	- 通过命令行或者客户端工具登录到mysql，创建数据库blogdb
 	- 修改blog_project/setting.py 修改数据库配置
 - 初始化数据库
 	- python manage.py makemigrations
 	- python manage.py migrate
 - 创建超级用户
 	- python manage.py createsuperuser
+	- wenqiang；Qu666666@；qwqhhjx@163.com
 - 启动程序
 	- python manage.py runserver
 - 查看项目结果
