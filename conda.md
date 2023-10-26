@@ -25,6 +25,8 @@
 	- conda uninstall package_name
 - 查看包的版本信息
 	- anaconda show <USER/PACKAGE>  
+- 查看anaconda环境下的python版本
+
 
 ## conda和pip的区别
 - conda可以管理非python包，pip只能管理python包。
