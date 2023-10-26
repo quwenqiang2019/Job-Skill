@@ -104,11 +104,14 @@
 		- urls.py(URL 映射到视图，用于指定哪个 URL 请求将调用哪个视图)
 		- views.py(文件用于定义应用程序的视图函数，用于处理 Web 请求并返回响应)
 	- blog_project(Django 项目)
-		- settings.py(文件包含了 Django 项目的设置，例如数据库配置、静态文件路径、模板路径等等)
+		- settings.py(文件包含了Django项目的设置，例如数据库配置、静态文件路径、模板文件路径等等)
 		- urls.py(文件包含了 Django 项目的 URL 映射关系)
 		- wsgi.py(文件是使用 WSGI（Web 服务器网关接口）的入口文件)
 	- log（日志文件）
-	- static（静态文件，css、images、js）
+	- static（静态文件）
+		- css
+		- images
+		- js
 	- templates（模板文件，html文件）
 	- uploads（上传文件）
 	- manage.py(是一个命令行工具，可以用来执行各种 Django 命令，例如启动开发服务器、执行数据库迁移等等)

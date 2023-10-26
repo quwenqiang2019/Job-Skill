@@ -33,3 +33,9 @@
 	 	IdentityFile C:/Users/Administrator/.ssh/id_rsa
 	```
 	- 在cmd输入：ssh -fCNL 127.0.0.1:31459:192.168.19.78:31459 tiaoban
+
+
+# 代理服务器http(s)和socks5的区别
+- 代理IP根据协议类型分为HTTP代理，HTTPS代理和SOCKS5（SOCKS代理的升级版）代理三种，它们都是目前较为常用的代理IP的协议类型。
+- HTTP代理和HTTPS代理主要用于代理HTTP和HTTPS流量，而SOCKS代理是一种通用的代理协议，可以代理各种协议的流量。
+- HTTP代理和HTTPS代理更适合用于Web浏览器和HTTP/HTTPS应用程序的代理设置，而SOCKS代理更适合用于网络层的代理需求。
