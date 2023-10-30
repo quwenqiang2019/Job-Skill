@@ -2,8 +2,6 @@
 在调试你的代码的时候不想管前面的代码，比如前面的代码要跑很久，对代码的其余部分进行编辑
 ```#%%```
 
-
-
 ## PyCharm支持的4种Python Interpreter和配置方法
 - System Interpreter（python本地解释器或者基于anaconda的本地python解释器）
 - Virtualenv Environment（项目虚拟环境）
@@ -23,8 +21,7 @@
 
 
 ## Pycharm快捷键
-
-查找替换： Ctrl + R
+- 查找替换： Ctrl + R
 
 
 
