@@ -8,7 +8,7 @@
 - 激活某个环境
 	- conda activate env_name
 - 删除环境/删除环境中的某个包
-	- conda remove -n env_name –all
+	- conda remove -n env_name -–all
 	- conda remove -n env_name  package_name
 - 查看环境下的包
 	- conda list
