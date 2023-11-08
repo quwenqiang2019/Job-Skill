@@ -7,3 +7,12 @@
 - move：移动文件。
 - del：删除文件。
 - ren：重命名文件。
+
+
+
+# cmd与powershell
+- CMD（Command Prompt）和PowerShell是Windows操作系统中的两个命令行工具
+- 命令提示符窗口（cmd.exe）是Windows的“标配”组件，它可以实现用户与操作系统的直接交流，并负责用户输入的所有命令的解释和支持。
+- powershell是系统工具，是对cmd（命令提示符）的扩展，其中多了很多操作，比如管道操作。
+- PowerShell可以看作是cmd的升级版、补充版，但其背后的实现方式却有很大的不同，PowerShell基于面向对象的，更为易用。
+- PowerShell是运行在Windows操作系统上实现对系统以及应用程序进行管理自动化的命令行脚本环境，PowerShell需要.NET环境的支持。
