@@ -16,8 +16,10 @@
 - 在环境下安装包
 	- 在线安装
 		- conda install package_name或pip install package_name
-		- conda install xxx：这种方式安装的库会放在anaconda3/pkgs目录下，这样的好处就是，当在某个环境下已经下载好了某个库，再在另一个环境中还需要这个库时，就可以直接从pkgs目录下将该库复制至新环境而不用重复下载。
-		- pip install xxx：分两种情况，一种情况就是当前conda环境的python是conda安装的，和系统的不一样，那么xxx会被安装到anaconda3/envs/current_env/lib/python3.x/site-packages文件夹中，如果当前conda环境用的是系统的python，那么xxx会通常会被安装到~/.local/lib/python3.x/site-packages文件夹中 
+			- conda install xxx：这种方式安装的库会放在anaconda3/pkgs目录下，这样的好处就是，当在某个环境下已经下载好了某个库，再在另一个环境中还需要这个库时，就可以直接从pkgs目录下将该库复制至新环境而不用重复下载。
+			- pip install xxx：
+				- 如果当前conda环境的python是conda安装的，和系统的不一样，那么xxx会被安装到anaconda3/envs/current_env/lib/site-packages文件夹中，
+				- 如果当前conda环境用的是系统的python，那么xxx会通常会被安装到python12/lib/site-packages文件夹中 
 	- 本地安装方式
 		- pip install   ～/Downloads/a.whl
 		- conda install --use-local  ~/Downloads/a.tar.bz2
