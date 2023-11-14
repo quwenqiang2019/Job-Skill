@@ -33,7 +33,7 @@
 	 	IdentityFile C:/Users/Administrator/.ssh/id_rsa
 	```
 	- 在cmd输入：ssh -fCNL 127.0.0.1:31459:192.168.19.78:31459 tiaoban
-
+ssh -fCNL 127.0.0.1:32107:192.168.57.51:32107 tiaoban
 
 # 代理服务器http(s)和socks5的区别
 - 代理IP根据协议类型分为HTTP代理，HTTPS代理和SOCKS5（SOCKS代理的升级版）代理三种，它们都是目前较为常用的代理IP的协议类型。
