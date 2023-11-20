@@ -28,6 +28,7 @@
 - 查看包的版本信息
 	- anaconda show <USER/PACKAGE>  
 - 查看anaconda环境下的python版本
+	- python --version
 
 
 ## conda和pip的区别
@@ -38,7 +39,7 @@
 	- 进入到虚拟环境的Scripts文件夹中，然后执行activate
 - conda安装的包是编译好的二进制文件，安装包文件过程中会自动安装依赖包；pip安装的包是wheel或源码，装过程中不会去支持python语言之外的依赖项。
 - conda安装的包会统一下载到一个目录文件中，当环境B需要下载的包，之前其他环境安装过，就只需要把之间下载的文件复制到环境B中，下载一次多次安装。pip是直接下载到对应环境中。
-- conda只能在conda管理的环境中使用，例如比如conda所创建的虚环境中使用。pip可以在任何环境中使用，在conda创建的环境 中使用pip命令，需要先安装pip（conda install pip ），然后可以 环境A 中使用pip 。conda 安装的包，pip可以卸载，但不能卸载依赖包，pip安装的包，只能用pip卸载。
+- conda只能在conda管理的环境中使用，例如比如conda所创建的虚环境中使用。pip可以在任何环境中使用，在conda创建的环境 中使用pip命令，需要先安装pip（conda install pip ），然后可以环境A 中使用pip。conda 安装的包，pip可以卸载，但不能卸载依赖包，pip安装的包，只能用pip卸载。
 
 
 ## 国内软件源

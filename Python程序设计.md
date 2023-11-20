@@ -4,14 +4,13 @@ pat = re.compile(PATTERN)
 - 字符串的查找替换
 	- re.sub(pat,newpat,s)
 - 字符串查找与匹配
-	- re.findall(pat, s)
 	- re.match(pat, s)
 	- re.search(pat, s)
+	- re.findall(pat, s)
 - 应用
 	- 匹配网址url、邮箱
 	- 使用中文正则表达式匹配指定的中文字符串
 	- 使用正则表达式匹配提取字符串
-
 - 案例
 	- PATTERN=r'(?:https?:\/\/)?(?:www\.)?(?:github|gitee|gitlab)\.com\/[\w\-]+\/[\w\-]+\/(?:pulls|pull|merge_requests)\/[0-9]+'
 
@@ -271,3 +270,32 @@ def add(a: int, b: int) -> int:
 ## IO密集型任务和CPU密集型任务
 - IO密集型，涉及到网络、磁盘IO的任务都是IO密集型任务，这类任务的特点是CPU消耗很少，任务的大部分时间都在等待IO操作完成（因为IO的速度远远低于CPU和内存的速度）。对于IO密集型任务，任务越多，CPU效率越高，但也有一个限度。常见的大部分任务都是IO密集型任务。
 - CPU密集型任务的特点是要进行大量的计算，消耗CPU资源，比如计算圆周率、对视频进行高清解码等等，全靠CPU的运算能力。这种计算密集型任务虽然也可以用多任务完成，但是任务越多，花在任务切换的时间就越多，CPU执行任务的效率就越低，所以，要最高效地利用CPU，计算密集型任务同时进行的数量应当等于CPU的核心数。
+
+
+## python数据科学库
+- 数据爬虫
+	- Scrapy
+	- BeautifulSoup
+- 数据分析与科学计算
+	- Pandas
+	- NumPy
+	- SciPy
+- 数据可视化
+	- Matplotlib
+	- Seaborn
+	- plolty
+- 机器学习
+	- SciKit-Learn
+	- LightGBM
+	- ELI5
+	- PyBrain
+	- Theano
+	- NuPIC
+	- Ramp
+	- Bob
+- 深度学习
+	- TensorFlow
+	- Keras
+	- PyTorch
+	- Caffe2
+	- Chainer

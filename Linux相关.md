@@ -59,4 +59,4 @@ Windows：收费+图形化界面慢
 
 - 关系
 	- 普通用户的主目录
-		- /home == C:\User； /home /xxx == C:\User\xxx
+		- /home == C:\User； /home/xxx == C:\User\xxx
