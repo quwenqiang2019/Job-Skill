@@ -75,11 +75,11 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- 将~/.ssh/id_rsa.pub或C:\Users\Administrator\.ssh\id_rsa.pub复制到gitlab
 - 远程仓库克隆到本地，当仓库地址支持 SSH 方式时
 	- git clone git@gitee.com:xxx/python_study.git
-- 要克隆远程仓库的某个分支到本地，可以使用以下命令：
-	- git clone -b 分支名 仓库地址
-	- 其中，分支名 是要克隆的分支的名称，仓库地址 是远程仓库的 URL。
 - 远程仓库克隆到本地，当仓库地址支持 HTTPS 方式时
 	- git clone https://gitee.com/xxx/python_study.git
+- 要克隆远程仓库的某个分支到本地，可以使用以下命令：
+	- git clone -b 分支名 仓库地址
+	- 其中，分支名 是要克隆的分支的名称，仓库地址是远程仓库的 URL。
 - 在本地目录下关联远程repository ：
 	- git remote add origin git@github.com:git_username/repository_name.git
 - 取消本地目录下关联的远程库：
@@ -97,9 +97,13 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 - wenqiang分支合并到main分支
 	- git checkout mian
 	- git merge --no-ff wenqiang
-- 从远程获取代码并合并本地的版本
+- 取回远程主机某个分支的更新，再与本地的指定分支合并
 	- git pull <远程主机名> <远程分支名>:<本地分支名>
 	- git pull origin main:wenqiang
+		- 取回origin主机的main分支，与本地的wenqiang分支合并
+		- git pull  =  git fetch + git merge
+	- 把远程仓库中的更新合并到本地库中，–rebase的作用是取消本地库中的commit，并接到新版本库中
+		- git pull --rebase origin main
 - 显示当前分支的最近几次提交
 	- git reflog
 - 显示当前分支的版本历史
@@ -112,8 +116,9 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- git status
 - 将暂存区内容添加到本地仓库中
 	- git commit -m [message]
-- 将本地的分支和远程分支进行关联
-	- git branch --set-upstream-to=origin/main
+- 将本地的master分支和远程next分支进行关联
+	- git branch --set-upstream master origin/next
+	- 在某些场合，Git会自动在本地分支与远程分支之间，建立一种追踪关系(tracking)。比如，在git clone的时候，本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的master分支自动”追踪”origin/master分支。
 - 将本地的分支版本上传到远程并合并
 	- git push <远程主机名> <本地分支名>:<远程分支名>
 - 隐藏当前的工作现场, 此时, git status的结果是 clean
