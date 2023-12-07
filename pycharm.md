@@ -1,14 +1,12 @@
 ## Pycharm分段执行代码（类似Jupyter）
-在调试你的代码的时候不想管前面的代码，比如前面的代码要跑很久，对代码的其余部分进行编辑
-```#%%```
-
-
+- 在调试你的代码的时候不想管前面的代码，比如前面的代码要跑很久，对代码的其余部分进行编辑
+	- ```#%%```
 
 ## PyCharm支持的4种Python Interpreter和配置方法
 - System Interpreter（python本地解释器或者基于anaconda的本地python解释器）
 - Virtualenv Environment（项目虚拟环境）
 	- 进入到项目目录下D:\myProject
-		- Python自3.3版本之后，官方自带了用于创建虚拟环境的venv模块
+		- Python自3.3版本之后，官方自带了用于创建虚拟环境的venv模块，并包含了pip
 			- python -m venv [虚拟环境名称]
 		- Python自3.3版本之前，
 			- virtualenv [虚拟环境名称]
@@ -17,14 +15,13 @@
 	- conda executable：D:\software\Anaconda3\Scripts\conda.exe
 		- D:\software\Anaconda3\python.exe(anaconda的基础python解释器)
 		- D:\software\Anaconda3\envs\env_name\python.exe(基于conda构建的python解释器)
-			- 在这个python版本解释器下，也可以基于这个python版本的解释器进一步为项目创建虚拟环境，在项目文件夹下生成一个虚拟环境文件夹D:\myProject\venv，这个虚拟环境不继承conda，只继承了python解释器的版本
+			- 在这个python版本解释器下，也可以基于这个python版本的解释器进一步为项目创建虚拟环境，在项目文件夹下生成一个虚拟环境文件夹D:\myProject\venv，这个虚拟环境不继承conda，只继承了python解释器的版本。
 - Pipenv Environment
 
 
 
 ## Pycharm快捷键
-
-查找替换： Ctrl + R
+- 查找替换： Ctrl + R
 
 
 
