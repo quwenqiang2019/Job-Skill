@@ -134,6 +134,9 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- git stash pop # 恢复最新的进度到工作区
 	- git stash pop stash名字（如stash@{1}） # 恢复指定的进度到工作区
 
+- 别人上传到远程仓库后，你没有及时的同步（拉取）到本地，但是你同时又添加了一些内容（提交），以致于你在提交时，它会检测到你之前从远程仓库拉取的时候的仓库状态和现在的不一样。于是，它为了安全起见拒绝了你的提交（然后就报了error: failed to push some refs to这个错误）。
+	- git pull origin master --allow-unrelated-histories
+
 
 ## git如何避免”warning: LF will be replaced by CRLF“提示？
 
@@ -149,3 +152,21 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 
 ## 解决git push报警告 TLS certificate verification has been disabled! 
 重启安全认证,执行：git config --global http.sslVerify true
+
+
+
+## 如何把本地项目上传到github？
+
+- 1、在本地创建一个版本库（即文件夹），通过git init把它变成Git仓库；
+- 2、把项目复制到这个文件夹里面，再通过git add .把项目添加到仓库；
+- 3、再通过git commit -m "注释内容"把项目提交到仓库；
+- 4、在Github上设置好SSH密钥后，新建一个远程仓库，通过git remote add origin https://github.com/guyibang/TEST2.git将本地仓库和远程仓库进行关联；
+- 5、最后通过git push -u origin master把本地仓库的项目推送到远程仓库（也就是Github）上；
+	- 由于新建的远程仓库是空的，所以要加上-u这个参数
+	- 若新建远程仓库的时候自动创建了README文件会报错，解决：
+		- git pull --rebase origin master，然后再push
+	- 文件过大报错，http.postBuffer默认上限为1M,所以将上限改大就行需要将上限改大。解决方案为：
+		- git config --global http.postBuffer 524288000
+
+
+##  Pycharm 中的 Git 操作 
