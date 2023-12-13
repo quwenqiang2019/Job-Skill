@@ -10,17 +10,17 @@ commit_id 是一个 Git 版本控制系统中的概念，它是一个由 40 个�
 
 ## 提交（包括commit/merge等）规范
 - Title(type:subject)
-- feat：新增功能
-- fix：bug 修复
-- docs：文档更新
-- style：不影响程序逻辑的代码修改(修改空白字符，格式缩进，补全缺失的分号等，没有改变代码逻辑)
-- refactor：重构代码(既没有新增功能，也没有修复 bug)
-- perf：性能, 体验优化
-- test：新增测试用例或是更新现有测试
-- build：主要目的是修改项目构建系统(例如 glup，webpack，rollup 的配置等)的提交
-- ci：主要目的是修改项目继续集成流程(例如 Travis，Jenkins，GitLab CI，Circle等)的提交
-- chore：不属于以上类型的其他类，比如构建流程, 依赖管理
-- revert：回滚某个更早之前的提交
+	- feat：新增功能
+	- fix：bug 修复
+	- docs：文档更新
+	- style：不影响程序逻辑的代码修改(修改空白字符，格式缩进，补全缺失的分号等，没有改变代码逻辑)
+	- refactor：重构代码(既没有新增功能，也没有修复 bug)
+	- perf：性能, 体验优化
+	- test：新增测试用例或是更新现有测试
+	- build：主要目的是修改项目构建系统(例如 glup，webpack，rollup 的配置等)的提交
+	- ci：主要目的是修改项目继续集成流程(例如 Travis，Jenkins，GitLab CI，Circle等)的提交
+	- chore：不属于以上类型的其他类，比如构建流程, 依赖管理
+	- revert：回滚某个更早之前的提交
 
 ### 例子：
 - feat: 添加用户登录功能
@@ -69,10 +69,15 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 两个工具：Sourcetree（查看分支与提交）、kDiff3（查看冲突解决冲突）
 
 - SSH生成公私钥（平台和gitlab都得添加公钥）
+
+	- ssh-keygen -t rsa -C wenqiang@nj.iscas.ac.cn
+	- 将~/.ssh/id_rsa.pub或C:\Users\Administrator\.ssh\id_rsa.pub复制到gitlab/github/gitee仓库的ssh公钥
 	- git config --global user.name "nickname"
 	- git config --global user.email "email"
-	- ssh-keygen -t rsa -C wenqiang@nj.iscas.ac.cn
-	- 将~/.ssh/id_rsa.pub或C:\Users\Administrator\.ssh\id_rsa.pub复制到gitlab
+
+
+这样配置之后，我在windows本地就有权限在我本地往这个gitlab仓库进行拉取和推送
+
 - 远程仓库克隆到本地，当仓库地址支持 SSH 方式时
 	- git clone git@gitee.com:xxx/python_study.git
 - 远程仓库克隆到本地，当仓库地址支持 HTTPS 方式时
@@ -81,7 +86,7 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- git clone -b 分支名 仓库地址
 	- 其中，分支名 是要克隆的分支的名称，仓库地址是远程仓库的 URL。
 - 在本地目录下关联远程repository ：
-	- git remote add origin git@github.com:git_username/repository_name.git
+	- git remote add origin https://gitee.com/xxx/python_study.git
 - 取消本地目录下关联的远程库：
 	- git remote remove origin
 - 列出所有本地分支
@@ -128,3 +133,19 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- git stash apply stash名字（如stash@{1}）# 重新显示标识为 id 的隐藏
 	- git stash pop # 恢复最新的进度到工作区
 	- git stash pop stash名字（如stash@{1}） # 恢复指定的进度到工作区
+
+
+## git如何避免”warning: LF will be replaced by CRLF“提示？
+
+这是因为目前的Git仓库由于跨操作系统操作而引发了部分文件的换行符转换问题。具体来说，Linux、macOS、Windows操作系统对于文本文件的换行符有不同的标准，因此一个文件如果与上次操作的系统环境不同，Git自然会在文件对比时识别到标识符被修改，从而引发提示。LF和CR字符在不同的操作系统中被用作操作符，其中LF（0x0A, \n）的初始定义是将光标从当前位置下移一行，不涉及移动到该行行首位置的动作，而CR（0x0D, \r）的原始含义则是将光标前移到当前行的行首，不涉及下移的动作。Linux系操作系统（含macOS，虽然它在OSX时期曾经使用过CR）使用LF直接表示光标换行+移到行首；Windows组合使用了CRLF（0x0D 0x0A, \r\n），无疑是符合标准语义的做法。
+
+尽管这不是一个Bug或错误，但还是可以通过如下方式对Git进行配置，以避免在每次提交代码时显示：
+#### Linux/macOS系统下在提交代码时自动将CRLF转换为LF
+- git config --global core.autocrlf input
+
+#### Windows系统下在提交代码时自动将LF转换为CRLF
+- 将Git的core.autocrlf配置设置为true，这将自动将行尾换行符转换为操作系统默认的换行符
+	- git config --global core.autocrlf true
+
+## 解决git push报警告 TLS certificate verification has been disabled! 
+重启安全认证,执行：git config --global http.sslVerify true
