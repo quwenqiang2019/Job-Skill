@@ -171,4 +171,8 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 		- git config --global http.postBuffer 524288000
 
 
+# 当本地新建一个分支第一次pull，git中出现“non-fast-forward”errors时的终极解决方案
+- git pull origin master --allow-unrelated-histories
+
+
 ##  Pycharm 中的 Git 操作 
