@@ -95,13 +95,15 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- git branch -r
 - 列出所有本地分支和远程分支
 	- git branch -a
-- 切换到wenqiang分支
+- 切换分支，切换到wenqiang分支
 	- git checkout wenqiang
 - 创建本地分支并切换到新建分支
 	- git checkout -b wenqiang
 - wenqiang分支合并到main分支
 	- git checkout mian
 	- git merge --no-ff wenqiang
+- 删除分支
+	- git branch -d wenqiang
 - 取回远程主机某个分支的更新，再与本地的指定分支合并
 	- git pull <远程主机名> <远程分支名>:<本地分支名>
 	- git pull origin main:wenqiang
@@ -167,6 +169,10 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 		- git pull --rebase origin master，然后再push
 	- 文件过大报错，http.postBuffer默认上限为1M,所以将上限改大就行需要将上限改大。解决方案为：
 		- git config --global http.postBuffer 524288000
+
+
+# 当本地新建一个分支第一次pull，git中出现“non-fast-forward”errors时的终极解决方案
+- git pull origin master --allow-unrelated-histories
 
 
 ##  Pycharm 中的 Git 操作 
