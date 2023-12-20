@@ -85,10 +85,6 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 - 要克隆远程仓库的某个分支到本地，可以使用以下命令：
 	- git clone -b 分支名 仓库地址
 	- 其中，分支名 是要克隆的分支的名称，仓库地址是远程仓库的 URL。
-- 在本地目录下关联远程repository ：
-	- git remote add origin https://gitee.com/xxx/python_study.git
-- 取消本地目录下关联的远程库：
-	- git remote remove origin
 - 列出所有本地分支
 	- git branch
 - 列出所有远程分支
@@ -163,6 +159,10 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 - 2、把项目复制到这个文件夹里面，再通过git add .把项目添加到仓库；
 - 3、再通过git commit -m "注释内容"把项目提交到仓库；
 - 4、在Github上设置好SSH密钥后，新建一个远程仓库，通过git remote add origin https://github.com/guyibang/TEST2.git将本地仓库和远程仓库进行关联；
+	- 在本地目录下关联远程repository ：
+		- git remote add origin https://gitee.com/xxx/python_study.git
+	- 取消本地目录下关联的远程库：
+		- git remote remove origin
 - 5、最后通过git push -u origin master把本地仓库的项目推送到远程仓库（也就是Github）上；
 	- 由于新建的远程仓库是空的，所以要加上-u这个参数
 	- 若新建远程仓库的时候自动创建了README文件会报错，解决：
@@ -176,3 +176,12 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 
 
 ##  Pycharm 中的 Git 操作 
+
+
+## git 远程仓库两种协议连接
+- ssh协议连接（好处是不需要每次输入密码）
+	- git remote -v（查看当前远程仓库使用的那种协议连接）
+	- git remote add origin git@github.com:unlimitbladeworks/Data-Struts-Learning.git（添加ssh协议的远程仓库）
+	- git remote rm origin（查看当前远程仓库使用的那种协议连接）
+- https协议连接
+	- git remote add origin https://github.com/unlimitbladeworks/Data-Struts-Learning.git（添加https协议的远程仓库）
