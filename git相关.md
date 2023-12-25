@@ -76,7 +76,7 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- git config --global user.email "email"
 
 
-这样配置之后，我在windows本地就有权限在我本地往这个gitlab仓库进行拉取和推送
+这样配置之后，我在windows本地就有权限在我本地往这个gitlab仓库以SSH协议进行拉取和推送
 
 - 远程仓库克隆到本地，当仓库地址支持 SSH 方式时
 	- git clone git@gitee.com:xxx/python_study.git
@@ -96,7 +96,7 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 - 创建本地分支并切换到新建分支
 	- git checkout -b wenqiang
 - wenqiang分支合并到main分支
-	- git checkout mian
+	- git checkout main
 	- git merge --no-ff wenqiang
 - 删除分支
 	- git branch -d wenqiang
