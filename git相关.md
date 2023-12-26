@@ -182,6 +182,6 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 - ssh协议连接（好处是不需要每次输入密码）
 	- git remote -v（查看当前远程仓库使用的那种协议连接）
 	- git remote add origin git@github.com:unlimitbladeworks/Data-Struts-Learning.git（添加ssh协议的远程仓库）
-	- git remote rm origin（查看当前远程仓库使用的那种协议连接）
+	- git remote rm origin（删除当前远程仓库使用的这种协议连接）
 - https协议连接
 	- git remote add origin https://github.com/unlimitbladeworks/Data-Struts-Learning.git（添加https协议的远程仓库）
