@@ -69,12 +69,8 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 两个工具：Sourcetree（查看分支与提交）、kDiff3（查看冲突解决冲突）
 
 - SSH生成公私钥（平台和gitlab都得添加公钥）
-
 	- ssh-keygen -t rsa -C wenqiang@nj.iscas.ac.cn
 	- 将~/.ssh/id_rsa.pub或C:\Users\Administrator\.ssh\id_rsa.pub复制到gitlab/github/gitee仓库的ssh公钥
-	- git config --global user.name "nickname"
-	- git config --global user.email "email"
-
 
 这样配置之后，我在windows本地就有权限在我本地往这个gitlab仓库以SSH协议进行拉取和推送
 
@@ -82,6 +78,13 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- git clone git@gitee.com:xxx/python_study.git
 - 远程仓库克隆到本地，当仓库地址支持 HTTPS 方式时
 	- git clone https://gitee.com/xxx/python_study.git
+- 查看、设置提交的账户邮箱和昵称
+	- 要查看当前 Git 的邮箱和昵称：
+		- git config user.email
+		- git config user.name
+	- 设置：
+		- git config --global user.name "nickname"
+		- git config --global user.email "email"
 - 要克隆远程仓库的某个分支到本地，可以使用以下命令：
 	- git clone -b 分支名 仓库地址
 	- 其中，分支名 是要克隆的分支的名称，仓库地址是远程仓库的 URL。
@@ -122,6 +125,11 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 - 将本地的master分支和远程next分支进行关联
 	- git branch --set-upstream master origin/next
 	- 在某些场合，Git会自动在本地分支与远程分支之间，建立一种追踪关系(tracking)。比如，在git clone的时候，本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的master分支自动”追踪”origin/master分支。
+- 查看当前 Git 仓库配置的远程主机名，可以使用以下命令：
+	- git remote -v
+	- 如果你还没有配置远程主机。你可以使用以下命令来添加远程主机：
+		- git remote add origin remote_repository_url
+		- origin 替换为你想要的远程主机名称，remote_repository_url 替换为远程仓库的 URL
 - 将本地的分支版本上传到远程并合并
 	- git push <远程主机名> <本地分支名>:<远程分支名>
 - 隐藏当前的工作现场, 此时, git status的结果是 clean
