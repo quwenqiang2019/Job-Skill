@@ -42,13 +42,7 @@
 - 现在，你已经成功创建并激活了名为 autogen 的虚拟环境。在该环境中，你可以安装和管理项目所需的包和库，而不会影响全局 Python 环境。如果你需要退出虚拟环境，只需在命令提示符窗口中运行 deactivate 命令即可。
 
 
-#在 pip命令后自己设定收集源（-i +url）
-- pip install [包名] -i
-	- 阿里云 http://mirrors.aliyun.com/pypi/simple/
-	- 中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
-	- 豆瓣(douban) http://pypi.douban.com/simple/
-	- 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
-	- 中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
+
 
 
 # 通过配置的代理服务器在具有外网连接的环境中在Pycharm中运行python代码
