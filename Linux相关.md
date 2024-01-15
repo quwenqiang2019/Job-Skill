@@ -12,7 +12,7 @@
 - sudo apt install xxx：安装xxx软件包工具
 - bash：进入bash shell
 - mv:文件移动
-- rm：删除文件
+- rm：删除文件或目录
 - cp：复制文件
 
 # 为社么项目部署要选择Linux操作系统
