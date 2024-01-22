@@ -180,3 +180,18 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 		- git merge dev
 	- git rebase
 
+
+
+## git提交或克隆报错fatal: unable to access ‘https://git
+
+这说明你采用http协议与远程仓库进行通信（clone、push、pull）但是这个协议出现了问题，主要时网络问题
+- //查看git当前设置
+	- git config --global -l 
+- //取消http代理（关闭梯子，Giee有效加快速度）
+	- git config --global --unset http.proxy
+- //取消https代理（关闭梯子，Giee有效加快速度）
+	- git config --global --unset https.proxy
+
+- 设置代理（打开梯子，Github有效加快速度）
+	- git config --global http.proxy http://127.0.0.1:10809
+
