@@ -7,8 +7,13 @@
 - vi/vim：文本编辑
 - cd：进入制定目录
 - touch: 创建文件
+- pwd：当前目录
 ![](./pic/p5.png)
-
+- sudo apt install xxx：安装xxx软件包工具
+- bash：进入bash shell
+- mv:文件移动
+- rm：删除文件或目录
+- cp：复制文件
 
 # 为社么项目部署要选择Linux操作系统
 Linux：免费+图形化/非图形化界面
@@ -60,3 +65,9 @@ Windows：收费+图形化界面慢
 - 关系
 	- 普通用户的主目录
 		- /home == C:\User； /home/xxx == C:\User\xxx
+
+
+
+
+
+- 在Linux系统中，文件路径使用正斜杠（/）而不是反斜杠（\）作为路径分隔符。

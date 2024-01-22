@@ -4,7 +4,7 @@
 1. 打开anaconda的终端命令窗口Anaconda Prompt
 1. 激活自己建立的Anaconda环境（conda activate GANPytorch）
 1. 运行jupyter（jupyter notebook）
-2. 
+
 ## 2. 修改路径（方便导入自己的模块）：
 1. 菜单中打开Anaconda Prompt，生成配置文件：jupyter notebook --generate-config
 1. 打开C:\Users\Administrator\.jupyter\ jupyter_notebook_config，修改
