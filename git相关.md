@@ -29,12 +29,12 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 ### 为什么PR包含的commit_id中没有PR或MR合并时的commit_id?
 一旦贡献者发起PR，就会有一个PR链接，这个PR链接对应的PR可能是open（未合并）或merged（已经合并）状态，若已经合并，就会产生一个merge_commit_id,通常情况下，PR链接中包含的commit_id是指该PR中所包含的所有单个提交的commit_id，而不是合并提交的merge_commit_id。因为merge_commit_id是合并操作的结果，它包含了多个父提交的信息。合并提交的commit_id通常可以在合并后的分支或者标签上找到。
 
-
 ### 为什么PR包含的commit_id 不是仓库任何分支（的祖先）?
 - PR 包含的commit_id一般在源分支上，这个分支一般是自己的本地分支；
 - 如果采用merge的PR合并方式，那么pr_commit_id就会同步到远程仓库的目标分支上，那么pr_commit_id就可以查询到相关的信息，就应该是仓库一个或多个分支的祖先；
 - 如果采用squash或者rebase的PR合并方式，那么pr_commit_id就不会同步到远程仓库的目标分支上，那么就查询不到pr_commit_id相关的信息，也就不是仓库一个或多个分支的祖先。
-- 
+
+
 ### 为什么PR合并的commit_id 不是仓库任何分支（的祖先）?
 - 一般而言，PR合并就会产生一个merge_commit_id，这个merge_commit_id在远程某个分支（即目标分支上），如何merge_commit_id不在任何分支（不是任何远程分支的祖先），那么可能合并时的目标分支已经被删除。
 
