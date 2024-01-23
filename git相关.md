@@ -88,8 +88,6 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- git remote add origin https://github.com/unlimitbladeworks/Data-Struts-Learning.git（添加https协议的远程仓库）
 
 
-
-
 ## 版本回退
 - git reset
 
@@ -99,7 +97,8 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 	- 法一：
 		- git switch main
 		- git merge dev
-	- git rebase
+	- 法二：
+		- git rebase
 
 
 
