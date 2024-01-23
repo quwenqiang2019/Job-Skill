@@ -57,7 +57,6 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 
 
 ## 如何把本地项目上传到github？
-
 - 1、在本地创建一个版本库（即文件夹），通过git init把它变成Git仓库；
 - 2、把项目复制到这个文件夹里面，再通过git add .把项目添加到仓库；
 - 3、再通过git commit -m "注释内容"把项目提交到仓库；
@@ -74,7 +73,7 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 		- git config --global http.postBuffer 524288000
 
 
-# 当本地新建一个分支第一次pull，git中出现“non-fast-forward”errors时的终极解决方案
+## 当本地新建一个分支第一次pull，git中出现“non-fast-forward”errors时的终极解决方案
 - git pull origin master --allow-unrelated-histories
 
 
