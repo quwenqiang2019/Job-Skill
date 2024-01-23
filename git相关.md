@@ -14,6 +14,7 @@ commit_id 是一个 Git 版本控制系统中的概念，它是一个由 40 个�
 - Release:发布某个版本的代码。当我们创建一个 release 时(有一个release_commit_id)，Git 会将代码库中的某个特定提交打包成一个压缩文件，并将其发布到 GitHub 等 Git 托管服务上。同时，我们还可以在 release 中添加一些描述信息，比如版本号、发布日期、更新内容等。release 是基于 tag 的，也就是说，我们在发布一个版本时，通常会先在代码库中打上一个 tag(tag_commit_id)，然后再将该 tag 对应的提交打包成一个 release 进行发布。
 
 
+
 ## 分支（branch） 
 在 Git 版本控制系统中，分支是指向某个特定提交（commit）的指针，指向你当前工作分支的最新的那个提交。每当你进行一次提交，Git 就会自动创建一个指向该提交的分支。如果你在某个分支上进行修改并提交，那么该分支的指针就会向前移动，指向新的提交。HEAD（头结点）指向当前工作的分支，即 HEAD 是当前分支的一个引用，如果切换了分支，HEAD 随之更新。分支的commit_id是最新提交（或发生其他操作）的commit_id
 
@@ -26,8 +27,6 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
  ![](./pic/p2.png)
 - 在这个分支结构中，commit C 是 master 和 feature1 分支的共同祖先，而 commit H 是 feature1 和 feature2 分支的共同祖先。因此，commit C 和 commit H 都属于多个分支。
 
-### 为什么PR包含的commit_id中没有PR或MR合并时的commit_id?
-一旦贡献者发起PR，就会有一个PR链接，这个PR链接对应的PR可能是open（未合并）或merged（已经合并）状态，若已经合并，就会产生一个merge_commit_id,通常情况下，PR链接中包含的commit_id是指该PR中所包含的所有单个提交的commit_id，而不是合并提交的merge_commit_id。因为merge_commit_id是合并操作的结果，它包含了多个父提交的信息。合并提交的commit_id通常可以在合并后的分支或者标签上找到。
 
 ### 为什么PR包含的commit_id 不是仓库任何分支（的祖先）?
 - PR 包含的commit_id一般在源分支上，这个分支一般是自己的本地分支；
