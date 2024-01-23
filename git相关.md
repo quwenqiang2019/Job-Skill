@@ -36,7 +36,7 @@ Tag 是 Git 中的一个轻量级标签，它可以被用来标记某个特定�
 - 如果采用squash或者rebase的PR合并方式，那么pr_commit_id就不会同步到远程仓库的目标分支上，那么就查询不到pr_commit_id相关的信息，也就不是仓库一个或多个分支的祖先。
 - 
 ### 为什么PR合并的commit_id 不是仓库任何分支（的祖先）?
-- 一般而言，只要PR合并，就会产生一个merge_commit_id，这个merge_commit_id在远程某个分支（即目标分支上），如何merge_commit_id不在任何分支（不是任何远程分支的祖先），那么可能合并时的目标分支已经被删除
+- 一般而言，PR合并就会产生一个merge_commit_id，这个merge_commit_id在远程某个分支（即目标分支上），如何merge_commit_id不在任何分支（不是任何远程分支的祖先），那么可能合并时的目标分支已经被删除。
 
 
 # 常见的问题：
