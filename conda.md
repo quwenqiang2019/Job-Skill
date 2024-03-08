@@ -30,6 +30,10 @@
 - 查看anaconda环境下的python版本
 	- python --version
 
+- 查看conda（pip）下各个包的版本：conda（pip） list
+- 查看指定包版本（以matplotlib为例）： conda list matplotlib
+- 查看python环境下能下载哪些版本的包（以matplotlib为例）：conda search xxx
+- pip install 包名==：能够列出当前版本的Python支持的所有第三方库的版本
 
 ## conda和pip的区别
 - conda可以管理非python包，pip只能管理python包。
