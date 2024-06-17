@@ -3,6 +3,12 @@
 
 
 - 加载文档：langchain.document_loaders
+	- 加载PDF文档
+		- from langchain.document_loaders import PyMuPDFLoader
+
+- 文档分割：langchain.text_splitter
+	- 按字符来分割文本
+		- from langchain.text_splitter import CharacterTextSplitter
 - 词嵌入模型：langchain.embeddings
 - 提示：langchain.prompts
 - 智能体：langchain.agents
