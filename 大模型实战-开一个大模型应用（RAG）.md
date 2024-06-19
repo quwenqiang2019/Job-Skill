@@ -73,7 +73,7 @@ https://github.com/datawhalechina/llm-universe/tree/1.0/project
 
 ![](pic/51.jpg)
 
-- 加载本地文档并读取
+- 加载读取本地文档
 - 数据清洗
 - 文本分割
 - 文本向量化
