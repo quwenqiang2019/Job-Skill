@@ -56,10 +56,11 @@ https://github.com/datawhalechina/llm-universe/tree/1.0/project
 	- 项目目标：通过LangChain构建一个**RAG系统**
 	- 核心功能
 	- 技术架构和工具
+		- 编程语言：python3.10
 		- 数据库：Chroma知识库
 		- 大模型：使用 GPT、科大讯飞的星火大模型、文心一言、GLM 等
 		- 前后端：使用 Gradio 和 Streamlit
-		- 流程的编排框架：LangChain框架
+		- 流程的编排框架：LangChain 0.0.292框架
 	- 实现流程
 		- 数据准备与向量知识库构建
 		- 大模型集成与API连接
