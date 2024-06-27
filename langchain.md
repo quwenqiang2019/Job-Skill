@@ -7,11 +7,15 @@
 - 加载文档：langchain.document_loaders
 	- 加载PDF文档
 		- from langchain.document_loaders import PyMuPDFLoader
-
 - 文档分割：langchain.text_splitter
 	- 按字符来分割文本
 		- from langchain.text_splitter import CharacterTextSplitter
 - 词嵌入模型：langchain.embeddings
+		- from langchain.embeddings.openai import OpenAIEmbeddings
+		- from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+		- from zhipuai_embedding import ZhipuAIEmbeddings
+
+
 - 提示：langchain.prompts
 - 智能体：langchain.agents
 - 对话模型：langchain.chat_models
@@ -19,3 +23,4 @@
 - 记忆：langchain.memory
 - 大模型：langchain.llms
 - 回调：langchain.callbacks
+- 向量数据库：langchain.vectorstores
