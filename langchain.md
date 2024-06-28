@@ -17,10 +17,16 @@
 
 
 - 提示：langchain.prompts
+		- from langchain.prompts import PromptTemplate
 - 智能体：langchain.agents
 - 对话模型：langchain.chat_models
-- langchain.chains
+		- from langchain.chat_models import ChatOpenAI
+- 问答链：langchain.chains
+		- from langchain.chains import RetrievalQA
 - 记忆：langchain.memory
 - 大模型：langchain.llms
+		- from langchain.llms import OpenAI
+		- from langchain.llms import HuggingFacePipeline
 - 回调：langchain.callbacks
 - 向量数据库：langchain.vectorstores
+		- from langchain.vectorstores import Chroma
