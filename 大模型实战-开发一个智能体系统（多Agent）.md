@@ -42,9 +42,10 @@
 	-  AI可以分为预测性AI和生成性AI，下一代 AI 技术走向并非是生成性 AI，而应该是**交互性 AI**，Agent技术是未来实现社会全面自动化的关键技术
 - 如何实现Agent
 	- 基于构建LLM的智能体的框架与工具包（具备较强的二次开发能力）
-		- 基于 LangChain , 利用LangChain的ReAct机制实现
+		- **基于 LangChain , 利用LangChain的ReAct机制实现**
 		- 基于Camel
 	- 基于 Agents 多智能体框架
+		- autogen
 	- 基于开箱即用的专注于某些特定任务的智能体（二次开发能力相对较弱）
 		- AutoGPT
 		- MetaGPT
