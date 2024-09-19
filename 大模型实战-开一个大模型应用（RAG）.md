@@ -163,3 +163,5 @@ https://github.com/datawhalechina/llm-universe/tree/1.0/project
 - 也可以直接调用 call_llm 中的 get_completion 函数来实现不使用数据库的 LLM；
 - 应用层调用已存在的数据库和 llm 中的自定义 LLM 来构建检索链；
 - 如果数据库不存在，应用层调用 create_db.py 创建数据库，该脚本可以使用 openai embedding 也可以使用 embedding.py 中的自定义 embedding
+
+## 提示工程、RAG和微调 - 哪个才是大模型应用优化的最佳路径？
