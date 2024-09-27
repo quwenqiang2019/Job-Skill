@@ -165,3 +165,6 @@ https://github.com/datawhalechina/llm-universe/tree/1.0/project
 - 如果数据库不存在，应用层调用 create_db.py 创建数据库，该脚本可以使用 openai embedding 也可以使用 embedding.py 中的自定义 embedding
 
 ## 提示工程、RAG和微调 - 哪个才是大模型应用优化的最佳路径？
+
+### 提示工程
+在应用Prompt的时候，我们需要理解一个Prompt 可能包含的6个要素：**任务，上下文，示例，角色，格式和语气**，而且这些要素是按重要性降序排列的。在这6个要素中，任务是必须的，上下文和示例非常重要，而且最好也要有角色、格式和语气。下面shi一个实际示例，需要在电子邮件中传达包含相关和有影响力信息的内容。
